@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/0c357db9dd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <title>Login-Cadastro</title>
+</head>
+<body>
+    <div class="container">
+        <div class="login-cadastro">
+            <form action="" class="login">
+                <h2 class="title">Login</h2>
+                <div class="campo-entrada">
+                    <i class="fas fa-user"></i>
+                    <input type="text" placeholder="Login">
+                </div>
+                <div class="campo-entrada">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Senha">
+                </div>
+                <input type="button" value="Entrar" class="btn">
+                <p class="texto-social">Ou entre com sua Rede Social</p>
+                <div class="social-media">
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-google"></i>
+                    </a>
+                </div>
+            </form>
+            <form action="" class="cadastro">
+                <h2 class="title">Cadastro</h2>
+                <div class="campo-entrada">
+                    <label for="name">Nome</label>
+                    <input id="name" type="text" name="name" placeholder="Digite seu nome" minlength="15" maxlength="60" required autofocus="true">
+                </div>
+                <div class="campo-entrada">
+                    <label for="lastname">Nome Materno</label>
+                    <input id="lastname" type="text" name="lastname" placeholder="Digite seu nome materno" required>
+                </div>
+                <div class="campo-entrada">
+                    <label for="date">Data de Nascimento</label>
+                    <input id="date" type="date" name="date" placeholder="xx/xx/xxxx" required>
+                </div>
+                <div class="campo-entrada">
+                    <label for="email">E-mail</label>
+                    <input id="email" type="email" name="email" placeholder="Digite seu e-mail" required>
+                </div>
+                <div class="campo-entrada">
+                    <label for="number">Telefone Celular</label>
+                    <input id="number" type="tel" name="number" placeholder="(+55) xx-xxxxxxxxx" required>
+                </div>
+                <div class="campo-entrada">
+                    <label for="number">Telefone Fixo</label>
+                    <input id="number" type="tel" name="number" placeholder="(+55) xx-xxxxxxxx" required>
+                </div>
+                <div class="campo-entrada">
+                    <label for="cpf">CPF</label>
+                    <input type="text" name="cpf" placeholder="xxx.xxx.xxx-xx" size="11" maxlength="11" placeholder="" required>
+                </div>
+                <div class="campo-entrada">
+                    <label for="state">Estado</label>
+                    <select id="estado">
+                        <option selected disabled value="">Selecione</option>
+                        <option value="ac">Acre</option> 
+                        <option value="al">Alagoas</option> 
+                        <option value="am">Amazonas</option> 
+                        <option value="ap">Amapá</option> 
+                        <option value="ba">Bahia</option> 
+                        <option value="ce">Ceará</option> 
+                        <option value="df">Distrito Federal</option> 
+                        <option value="es">Espírito Santo</option> 
+                        <option value="go">Goiás</option> 
+                        <option value="ma">Maranhão</option> 
+                        <option value="mt">Mato Grosso</option> 
+                        <option value="ms">Mato Grosso do Sul</option> 
+                        <option value="mg">Minas Gerais</option> 
+                        <option value="pa">Pará</option> 
+                        <option value="pb">Paraíba</option> 
+                        <option value="pr">Paraná</option> 
+                        <option value="pe">Pernambuco</option> 
+                        <option value="pi">Piauí</option> 
+                        <option value="rj">Rio de Janeiro</option> 
+                        <option value="rn">Rio Grande do Norte</option> 
+                        <option value="ro">Rondônia</option> 
+                        <option value="rs">Rio Grande do Sul</option> 
+                        <option value="rr">Roraima</option> 
+                        <option value="sc">Santa Catarina</option> 
+                        <option value="se">Sergipe</option> 
+                        <option value="sp">São Paulo</option> 
+                        <option value="to">Tocantins</option> 
+                    </select>
+                    </div>
+                    <div class="campo-entrada">
+                        <label for="city">Cidade</label>
+                        <input id="city" type="text" name="city" placeholder="Digite sua Cidade" required>
+                    </div>
+                    <div class="campo-entrada">
+                        <label for="address">Rua</label>
+                        <input id="address" type="text" name="address" placeholder="Digite seu Endereço">
+                    </div>
+                    <div class="campo-entrada">
+                        <label for="n">N°</label>
+                        <input id="n" type="text" name="n" placeholder="Digite o número">
+                    </div>
+                    <div class="campo-entrada">
+                        <i class="fas fa-user"></i>
+                        <label for="login"></label>
+                        <input id="login" type="text" name="login" placeholder="Login" minlength="6" maxlength="6"required>
+                    </div>
+                    <div class="campo-entrada">
+                        <i class="fas fa-lock"></i>
+                        <label for="password"></label>
+                        <input id="password" type="password" name="password" placeholder="Senha" minlength="8" maxlength="8" required>
+                    </div>
+                    <div class="campo-entrada">
+                        <i class="fas fa-lock"></i>
+                        <label for="confirmpassword"></label>
+                        <input id="confirmpassword" type="password" name="confirmpassword" placeholder="Confirme sua senha" minlength="8" maxlength="8" required>
+                    </div>
+                    <div class="campo-entrada">
+                        <input type="radio" id="female" name="gender">
+                        <label for="female">Feminino</label>
+                    </div>
+                    <div class="campo-entrada">
+                        <input type="radio" id="male" name="gender">
+                        <label for="male">Masculino</label>
+                    </div>
+                    <div class="campo-entrada">
+                        <input type="radio" id="others" name="gender">
+                        <label for="others">Outros</label>
+                    </div>
+                    <div class="campo-entrada">
+                        <input type="radio" id="none" name="gender">
+                        <label for="none">Prefiro não dizer</label>
+                    </div>
+
+                <input type="button" value="Cadastrar" class="btn">
+                <p class="texto-social">Ou Cadastre-se com sua Rede Social</p>
+                <div class="social-media">
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-google"></i>
+                    </a>
+                </div>
+            </form>
+        </div>
+        <div class="panels-container">
+            <div class="panel esquerda">
+                <div class="content">
+                    <h3>Possui Cadastro?</h3>
+                    <p>Venha para área de Login</p>
+                    <button class="btn"> Login</button>
+                </div>
+                <img src="logo cpaas.png" alt="" class="imagem">
+            </div>
+            <div class="panel direita">
+                <div class="content">
+                    <h3>Não possui Cadastro?</h3>
+                    <p>Venha se Cadastrar</p>
+                    <button class="btn"> Cadastro</button>
+                </div>
+                <img src="logo cpaas.png" alt="" class="imagem">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
