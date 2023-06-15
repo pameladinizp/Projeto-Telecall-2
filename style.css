@@ -4,6 +4,7 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+
 body{
     display: flex;
     align-items: center;
@@ -11,6 +12,7 @@ body{
     min-height: 100vh;
     background:#444 ;
 }
+
 .container{
     position: relative;
     width: 70vw;
@@ -18,15 +20,20 @@ body{
     background: #fff;
     border-radius: 15px;
     box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+    overflow: hidden;
 }
+
 .container::before{
     content:"";
     position: absolute;
     top: 0;
+    left: -50%;
     width: 100%;
     height: 100%;
     background: linear-gradient(-45deg, #758ef9, #2842b6);
     z-index: 6;
+    transform: translateX(100%);
+    transition: 1s ease-in-out;
 }
 
 .login-cadastro{
@@ -40,6 +47,7 @@ body{
     justify-content: space-around;
     z-index: 5;
 }
+
 form{
     display: flex;
     align-items: center;
@@ -49,11 +57,25 @@ form{
     min-width: 238px;
     padding: 0 10px;
 }
+
+form.login-form{
+    opacity: 1;
+    transition: 0.5s ease-in-out;
+    transition-delay: 1s;
+}
+
+form.cadastro-form{
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+    transition-delay: 1s;
+}
+
 .title{
     font-size: 35px;
     color: rgb(58, 123, 197);
     margin-bottom: 10px;
 }
+
 .campo-entrada{
     width: 100%;
     height: 40px;
@@ -64,12 +86,14 @@ form{
     display: flex;
     align-items: center;
 }
+
 .campo-entrada i {
     flex: 1;
     text-align: center;
     color: #666;
     font-size: 15px;
 }
+
 .campo-entrada input{
     flex: 5;
     background: none;
@@ -80,6 +104,7 @@ form{
     font-weight: 300;
     color: #444 ;
 }
+
 .btn{
     width: 150px;
     height: 50px;
@@ -92,17 +117,21 @@ form{
     text-transform: uppercase;
     cursor: pointer;
 }
+
 .btn:hover{
     background: rgb(42, 88, 142);
 }
+
 .texto-social{
     margin: 10px 0;
     font-size: 16px;
 }
+
 .social-media{
     display: flex;
     justify-content: center;
 }
+
 .social-icon{
     height: 30px;
     width: 30px;
@@ -114,13 +143,16 @@ form{
     border-radius: 50px;
     margin: 0  5px;
 }
+
 a{
     text-decoration:none ;
 }
+
 .social-icon:hover{
     color: rgb(42, 88, 142);
     border-color: rgb(42, 88, 142);
 }
+
 .panels-container{
     position: absolute;
     top: 0;
@@ -131,6 +163,7 @@ a{
     align-items: center;
     justify-content: space-around;
 }
+
 .panel{
     display: flex;
     flex-direction: column;
@@ -139,9 +172,119 @@ a{
     width: 35%;
     min-width: 238px;
     padding: 0 10px;
+    text-align: center;
     z-index: 6;
 }
+
+.panel-esquerda{
+    pointer-events: none;
+}
+
+.content{
+    color: #fff;
+    transition: 1.1s ease-in-out;
+    transition-delay: 0.5s;
+}
+
+.panel h3{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.panel p{
+    font-size: 15px;
+    padding: 10px 0;
+}
+
 .imagem{
     width: 100%;
+    transition: 1.1s ease-in-out;
+    transition-delay: 0.4s;
+}
 
+.panel-esquerda .imagem,
+.panel-esquerda .content{
+    transform: translateX(-200%);
+}
+
+.panel-direita .imagem,
+.panel-direita .content{
+    transform: translateX(0);
+}
+
+.account-text{
+    display: none;
+}
+
+/*Animation*/
+
+.container.cadastro-mode::before{
+    transform: translateX(0);
+}
+
+.container.cadastro-mode .panel-direita .imagem,
+.container.cadastro-mode .panel-direita .content{
+    transform: translateX(200%);
+}
+
+.container.cadastro-mode .panel-esquerda .imagem,
+.container.cadastro-mode .panel-esquerda .content{
+    transform: translateX(0);
+}
+
+.container.cadastro-mode form.login-form {
+    opacity: 0;
+}
+
+.container.cadastro-mode form.cadastro-form {
+    opacity: 1;
+}
+
+.container.cadastro-mode .panel-direita{
+    pointer-events: none;
+}
+
+.container.cadastro-mode .panel-esquerda{
+    pointer-events: all;
+}
+
+/*Responsive*/
+
+@media (max-width:779px){
+    .container{
+        width: 100vw;
+        height: 100vh;
+    }
+}
+
+@media (max-width:635px){
+    .container::before{
+        display: none;
+    }
+    form{
+        width: 80%;
+    }
+    form.cadastro-form{
+        display: none;
+    }
+    .container.cadastro-mode2 form.cadastro-form{
+        display: flex;
+        opacity: 1;
+    }
+    .container.cadastro-mode2 form.login-form{
+        display: none;
+    }
+    .panels-container{
+        display: none;
+    }
+    .account-text{
+        display: initial;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width:320px){
+    form{
+        width: 90%;
+    }
 }

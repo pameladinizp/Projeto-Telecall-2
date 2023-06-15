@@ -12,7 +12,7 @@
 <body>
     <div class="container">
         <div class="login-cadastro">
-            <form action="" class="login">
+            <form action="" class="login-form">
                 <h2 class="title">Login</h2>
                 <div class="campo-entrada">
                     <i class="fas fa-user"></i>
@@ -38,8 +38,10 @@
                         <i class="fab fa-google"></i>
                     </a>
                 </div>
+                <p class="account-text">Não possui Cadastro? <a href="#" id="cadastro_btn2">Cadastro</a></p>
             </form>
-            <form action="" class="cadastro">
+        
+            <form action="" class="cadastro-form">
                 <h2 class="title">Cadastro</h2>
                 <div class="campo-entrada">
                     <label for="name">Nome</label>
@@ -162,26 +164,28 @@
                         <i class="fab fa-google"></i>
                     </a>
                 </div>
+                <p class="account-text">Possui Cadastro? <a href="#" id="login_btn2">Login</a></p>
             </form>
         </div>
         <div class="panels-container">
-            <div class="panel esquerda">
+            <div class="panel panel-esquerda">
                 <div class="content">
                     <h3>Possui Cadastro?</h3>
                     <p>Venha para área de Login</p>
-                    <button class="btn"> Login</button>
+                    <button class="btn" id="login-btn"> Login</button>
                 </div>
-                <img src="logo cpaas.png" alt="" class="imagem">
+                <img src="img-caaps/image11.png" alt="" class="imagem">
             </div>
-            <div class="panel direita">
+            <div class="panel panel-direita">
                 <div class="content">
                     <h3>Não possui Cadastro?</h3>
                     <p>Venha se Cadastrar</p>
-                    <button class="btn"> Cadastro</button>
+                    <button class="btn" id="cadastro-btn"> Cadastro</button>
                 </div>
-                <img src="logo cpaas.png" alt="" class="imagem">
+                <img src="img-caaps/image11.png" alt="" class="imagem">
             </div>
         </div>
     </div>
+    <script src="app.js"></script>
 </body>
 </html>
