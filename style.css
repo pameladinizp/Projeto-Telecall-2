@@ -108,6 +108,10 @@ form.cadastro-form{
     color: #444 ;
 }
 
+fieldset{
+    border: none;
+}
+
 .btn{
     width: 150px;
     height: 50px;
